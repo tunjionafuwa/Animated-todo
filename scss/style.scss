@@ -58,7 +58,52 @@ form{
         color: var(--primary-color);
         background: #d88771;
     }
-
-    
 }
 
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .todo-list{
+        min-width: 30%;
+        list-style: none;
+    }
+
+    .todo{
+        background-color: #fff;
+        color: #000;
+        margin-bottom: 10px;
+        min-height: 3em;
+
+        display: flex;
+        align-items: center;
+
+        &-item{
+            flex: 1;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        button{
+            padding: 1.1rem;
+            border: none;
+            background-color: #ff6f47;
+            cursor: pointer;
+            color: var(--primary-color);
+
+            .fa-trash,
+            .fa-check{
+                pointer-events: none;
+            }
+        }
+
+        button.btn-complete{
+            background-color: rgb(73,204,73);
+        }
+
+        button:focus{
+            outline: none;
+        }
+    }
+}
